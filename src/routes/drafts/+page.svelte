@@ -1,16 +1,16 @@
 <script lang="ts">
   import Post from "$lib/components/Post.svelte";
-  import data from "../../lib/data.json";
+  import type { PageData } from "./$types";
+
+  export let data: PageData;
 </script>
 
 <div>
   <h1>Drafts</h1>
   <main>
     <div>
-      {#each data as post (post.id)}
-        {#if !post.published}
+      {#each data.drafts as post (post.id)}
           <Post {post} />
-        {/if}
       {/each}
     </div>
   </main>
