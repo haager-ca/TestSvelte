@@ -29,7 +29,12 @@
     "vite": "^4.0.0"
   },
   "type": "module",
+  
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
+  },
+
+  "dependencies": {
+    "@prisma/client": "^5.7.1"
   }
 }
